@@ -1,0 +1,12 @@
+# Counting or Forwarding module
+
+kforward use the rx\_handler facility while xdp\_forward hijacks XDP to receive
+the packets using a normal functions (and not BPF). Works only with driver implementing XDP (i40e, ixgbe, but probably a lot of others too).
+
+The XDP version only supports counting.
+
+KERNEL_DIR=/mnt/traces/linux-any ./build.sh
+KERNEL_DIR=/mnt/traces/linux-4.13-rc1 ./build.sh XDP=m
+
+
+
